@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forge | Marwar Family</title>
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/forge.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&family=Source+Serif+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="forge-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">The Forge</h1>
+                <h2 class="hero-subtitle-main">THEN AND NOW</h2>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">THEN AND NOW</p>
+            </div>
+        </section>
+
+        <section class="forge-ventures">
+            <div class="venture-container">
+                
+                <article class="forge-card">
+                    <div class="card-image">
+                        <img src="../assets/images/mill.jpg" alt="Marwari Mill Stores Co.">
+                    </div>
+                    <div class="card-details">
+                        <h3 class="card-title">Marwari Mill Stores Co.</h3>
+                        <p class="card-text">The primary supplier and importer for the jute industry in Calcutta. This was not trade—this was infrastructure. The engine of a city's wealth moved through our hands.</p>
+                        <div class="card-line"></div>
+                        <p class="card-label">CALCUTTA INDUSTRIAL SUPPLY NETWORK</p>
+                    </div>
+                </article>
+
+                <article class="forge-card">
+                    <div class="card-image">
+                        <img src="../assets/images/pin.jpg" alt="Indian Pin Mfg Co.">
+                    </div>
+                    <div class="card-details">
+                        <h3 class="card-title">Indian Pin Mfg Co.</h3>
+                        <p class="card-text">We did not just trade steel. We forged it. From our furnaces came the pins, the components, the industrial sinew of a growing nation. Builders, not just traders.</p>
+                        <div class="card-line"></div>
+                        <p class="card-label">FACTORY-BASED MANUFACTURING VENTURE</p>
+                    </div>
+                </article>
+
+                <article class="forge-card">
+                    <div class="card-image">
+                        <img src="../assets/images/japanmission.jpg" alt="The Japan Mission">
+                    </div>
+                    <div class="card-details">
+                        <h3 class="card-title">The Japan Mission, 1949</h3>
+                        <p class="card-text">Sanwalram Mandelia in post-war Japan. He did not follow markets; he recognized builders. The engineer Sakamoto became a lifelong alliance. This is the Mandelia way—seeing what others cannot.</p>
+                        <div class="card-line"></div>
+                        <p class="card-label">AN EARLY GLOBAL PARTNERSHIP</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="philosophy-section">
+            <div class="philosophy-content">
+                <h2 class="philosophy-main-text">The same principles that built these enterprises now build very different ones.</h2>
+                <div class="philosophy-line"></div>
+                <p class="philosophy-sub-text">STEEL TO SOFTWARE. FACTORIES TO FRAMEWORKS. THE FORGE HAS CHANGED. THE FORGERS REMAIN.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Load components and highlight 'forge' in the nav
+        window.onload = () => {
+            loadComponent('navbar-placeholder', '../Components/navbar.html', 'forge');
+            loadComponent('footer-placeholder', '../Components/footer.html');
+        };
+    </script>
+</body>
+</html>

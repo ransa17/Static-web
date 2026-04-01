@@ -1,0 +1,493 @@
+/* --- Global Reset & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #E8DED0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Section 1: Stewardship Hero --- */
+.stewardship-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/images/stewardshipbg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-divider {
+    width: 80px;
+    height: 1.5px;
+    background-color: #a38d78; 
+    margin: 0 auto 20px auto;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f4f4;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* --- Section 2: Measure Quote --- */
+.measure-section {
+    background-color: #E8DED0; 
+    padding: 50px 20px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.measure-container {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.measure-line {
+    width: clamp(100px, 20vw, 180px);
+    height: 1px;
+    background-color: #a38d78; 
+    opacity: 0.5;
+}
+
+.measure-line.top { margin-bottom: 25px; }
+.measure-line.bottom { margin-top: 25px; }
+
+.measure-text {
+    font-family: 'Playfair Display', serif;
+    color: #1B1917; 
+    font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+/* --- Section 3: Pillars of Impact --- */
+.pillars-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pillars-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pillars-main-title {
+    font-family: 'Playfair Display', serif;
+    color: #1B1917;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.pillars-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #8d8378;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Pillar Card Styles --- */
+.pillar-card {
+    background-color: #ede4d9; 
+    border-radius: 20px;
+    padding: 45px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: none; 
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s ease;
+    text-align: center; 
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* Uniform Image Adjustment */
+.pillar-icon {
+    height: 380px; /* Fixed Height to match the right image */
+    width: 100%;   /* Fill the width of the container */
+    max-width: 320px; /* Adjusting based on your screenshot label */
+    margin: 0 auto 30px auto;
+    object-fit: cover; /* CRITICAL: Crops images to fill the box without stretching */
+    display: block;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1B1917;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.card-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #a38d78;
+    margin: 15px auto; 
+}
+
+.card-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.card-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #a38d78;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (min-width: 768px) {
+    .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pillar-card {
+        text-align: left; 
+        padding: 50px 40px;
+    }
+
+    .pillar-icon {
+        margin: 0 0 30px 0; /* Left align for Desktop */
+        height: 385px; /* Exact height from your screenshot label */
+        width: 328px; /* Exact width from your screenshot label */
+    }
+
+    .card-divider {
+        margin: 20px 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .stewardship-hero { height: 80vh; }
+    .pillars-section { padding: 60px 15px; }
+    .pillar-card { padding: 40px 25px; }
+    .pillar-icon {
+        height: 350px; /* Slightly shorter for mobile screens */
+        width: 100%;
+    }
+}
+
+@media (max-height: 500px) {
+    .stewardship-hero { height: 110vh; }
+}
+
+/* --- The Work Continues Section --- */
+.work-continues-section {
+    background-color: #E8DED0; /* Exact color requested */
+    padding: 40px 20px; /* Reduced vertical padding for less height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work-container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.work-title {
+    font-family: 'Playfair Display', serif;
+    color: #1B1917;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.work-list {
+    margin-bottom: 30px;
+}
+
+.work-list-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    color: #8d8378;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.work-desc {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .work-continues-section {
+        padding: 30px 15px; /* Even shorter on mobile */
+    }
+
+    .work-title {
+        margin-bottom: 20px;
+    }
+
+    .work-list-item {
+        margin-bottom: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .work-desc {
+        line-height: 1.5;
+    }
+}
+
+/* --- Legacy Grid Section --- */
+.legacy-section {
+    background-color: #ffffff; /* Section background is white */
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.legacy-card {
+    background-color: #ede4d9; /* Card background as previous */
+    padding: 30px;
+    border-radius: 5px; /* Slight radius for a classic look */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Uniform Image box */
+.legacy-img-box {
+    width: 100%;
+    height: 250px; /* Uniform height for all cards */
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.legacy-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures uniform look without stretching */
+}
+
+.legacy-content {
+    text-align: left;
+}
+
+.legacy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #1B1917;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.legacy-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.legacy-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #a38d78;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.legacy-footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #8d8378;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- Responsive Layout Adjustments --- */
+
+/* Desktop: 2x2 Grid */
+@media (min-width: 992px) {
+    .legacy-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    
+    .legacy-img-box {
+        height: 280px; /* Slightly taller for desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .legacy-section {
+        padding: 50px 15px;
+    }
+    
+    .legacy-title {
+        font-size: 1.4rem;
+    }
+    
+    .legacy-img-box {
+        height: 220px; /* Shorter for mobile screens */
+    }
+}
+
+/* --- Dharma Quote Section --- */
+.dharma-section {
+    background-color: #E8DED0; /* Matching global cream background */
+    padding: 60px 20px; /* Low vertical padding for less height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dharma-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dharma-line {
+    width: clamp(80px, 15vw, 150px);
+    height: 1px;
+    background-color: #a38d78;
+    opacity: 0.5;
+    margin: 20px 0; /* Minimal spacing between elements */
+}
+
+.dharma-quote {
+    font-family: 'Playfair Display', serif;
+    color: #1B1917;
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    line-height: 1.4;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.dharma-desc {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.8;
+    max-width: 750px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 768px) {
+    .dharma-section {
+        padding: 40px 15px; /* Even tighter height for mobile */
+    }
+
+    .dharma-quote br {
+        display: none; /* Allows text to flow naturally on small screens */
+    }
+
+    .dharma-quote {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    .dharma-desc {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .dharma-line {
+        margin: 15px 0;
+    }
+}

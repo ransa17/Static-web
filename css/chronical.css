@@ -1,0 +1,281 @@
+/* --- Chronicle Design System --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8DED0; /* Match Global Beige */
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.chronicle-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/images/chroniclebg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(30, 14, 3, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 68px);
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 3vw, 28px);
+    color: #ffffff;
+    font-weight: 400;
+        
+        text-transform: uppercase;
+}
+
+/* --- Narrative Narrative Layout --- */
+.narrative-container {
+    padding: 100px 5% 60px 5%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.narrative-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 120px;
+}
+
+.narrative-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.narrative-text {
+    flex: 1.2;
+}
+
+.narrative-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 56px);
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.narrative-heading span {
+    font-size: 0.7em;
+    display: block;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.narrative-text p {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.narrative-image {
+    flex: 0.8;
+}
+
+.narrative-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%);
+    
+}
+.narrative-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #B69B7C;
+    margin: 80px 0;          
+}
+.narrative-dividerr {
+    width: 30%;
+    height: 2px;
+    background-color: #B69B7C; 
+    opacity: 0.6;             
+    margin-top: 40px;          
+    margin-bottom: 40px;
+  margin-left: auto;
+    margin-right: auto;
+}
+
+.narrative-container .narrative-divider:last-of-type {
+    margin-bottom: 100px;
+}
+
+/* Mobile Adjustment for Dividers */
+@media (max-width: 768px) {
+    .narrative-divider {
+        margin: 50px 0;
+        width: 80%;           /* Shorten slightly on mobile for aesthetic */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --- Timeline Section --- */
+.timeline-section {
+    background-color: #F5F0E6; /* Slightly lighter beige */
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.timeline-main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 48px);
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    color: #2C2C2C;
+    line-height: 72px;
+
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-node {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 3px solid #B69B7C;
+    background: radial-gradient(circle, #E0C2A0 0%, #F5F0E6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.inner-dot {
+    width: 12px;
+    height: 12px;
+    background: #B69B7C;
+    border-radius: 50%;
+}
+
+.timeline-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 30px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.timeline-item:hover .timeline-img {
+    filter: grayscale(0%);
+}
+
+.timeline-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #B69B7C;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.timeline-event {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #2C2C2C;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.timeline-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #6B6258;
+}
+
+/* --- Final Quote --- */
+.final-quote-section {
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.quote-line {
+   width: 300px;
+    height: 2px;
+    background: #B69B7C;
+}
+
+.final-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.8rem, 4.5vw, 58px);
+    line-height: 1.1;
+    color: #2C2C2C;
+    margin: 60px 0;
+
+}
+
+
+@media (max-width: 1024px) {
+    .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .narrative-row, .narrative-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .narrative-text p {
+        font-size: 18px;
+    }
+
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-line {
+        width: 150px;
+    }
+}

@@ -1,0 +1,244 @@
+/* --- Global Reset & Fonts --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', sans-serif; }
+
+
+/* --- NAVBAR & OVERLAY STYLES --- */
+.header {
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(245, 240, 230, 0.22); /* Same as your provided code */
+}
+
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.logo-container img { height: 80px; display: block; }
+.logo-text { 
+    color: #221E1D; 
+    font-size: 41px; 
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 600; 
+    word-wrap: break-word;
+}
+
+/* HAMBURGER STYLING */
+.nav-toggle { background: none; border: none; cursor: pointer; padding: 10px; z-index: 1100; }
+.hamburger { 
+    display: block; 
+    width: 30px; 
+    height: 2px; 
+    background: #221E1D; 
+    position: relative; 
+}
+.hamburger::before, .hamburger::after { 
+    content: ''; 
+    position: absolute; 
+    width: 30px; 
+    height: 2px; 
+    background: #221E1D; 
+    left: 0; 
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
+
+/* OVERLAY STYLING */
+.nav-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(232, 222, 208, 0.9); /* Your specific beige overlay */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 2000; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-overlay.active { 
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.nav-close { 
+    position: absolute; 
+    top: 30px; 
+    right: 80px; 
+    font-size: 50px; 
+    background: none; 
+    border: none; 
+    color: #221E1D; 
+    cursor: pointer; 
+    font-weight: 200; 
+}
+
+.nav-links { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 60px; 
+    text-align: center; 
+    font-family: Montserrat; 
+}
+
+.nav-item { 
+    text-decoration: none; 
+    color: #221E1D; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
+    font-weight: 600; 
+    letter-spacing: 2px; 
+    transition: color 0.3s; 
+    text-transform: uppercase; 
+}
+
+.nav-item:hover, .nav-item.active { 
+    color: #8c734b; /* Marwar Gold */
+}
+
+@media (max-width: 1024px) {
+    .header { padding: 15px 40px; }
+    .logo-container img { height: 60px; }
+    .logo-text { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+    .header { padding: 10px 20px; }
+    .logo-container img { height: 50px; }
+    .logo-text { font-size: 18px; }
+    .nav-item { font-size: 18px; letter-spacing: 2px; }
+}
+
+
+/* --- THE MARWAR ARCHITECTURAL FOOTER --- */
+.marwar-footer {
+    background-color: #F5F0E6;
+    padding: 60px 80px 10px 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    max-width: 1568px;
+    width: 100%;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #B69B7C;
+    opacity: 0.6;
+    margin-bottom: 60px; 
+}
+
+.footer-main-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+
+.footer-brand-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.footer-company-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #221E1D;
+    margin: 0;
+}
+
+.footer-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #6B6258;
+}
+
+.award-icon {
+    width: 257px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+
+.footer-nav {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; 
+    text-align: left; 
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6B6258;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #8c734b;
+}
+
+.footer-copyright {
+    margin-top: 90px; 
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #6B6258;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- RESPONSIVE LOGIC --- */
+@media (max-width: 1024px) {
+    .marwar-footer { padding: 60px 40px; }
+}
+
+@media (max-width: 768px) {
+    .footer-main-content {
+        flex-direction: column; /* Stack only on mobile */
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .footer-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-logo {
+        height: 80px;
+    }
+}

@@ -1,0 +1,224 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- Section 1: Forge Hero --- */
+.forge-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/images/forgebg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(30, 14, 3, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 8vw, 68px);
+    font-weight: 600;
+}
+
+.hero-subtitle-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 56px);
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.hero-divider {
+    width: 120px;
+    height: 1.5px;
+    background-color: #B69B7C;
+    margin: 20px auto;
+}
+
+.hero-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 28px);
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+/* --- Section 2: Venture Grid --- */
+.forge-ventures {
+    background-color: #F5F0E6;
+    padding: 120px 5%;
+}
+
+.venture-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.forge-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card-image {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.card-image img {
+    width: 100%;
+    aspect-ratio: 328/385;
+    object-fit: cover;
+    filter: sepia(20%) contrast(1.1);
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2C2C2C;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.card-text {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #6B6258;
+    margin-bottom: 30px;
+    min-height: 130px; /* Aligns dividers if text length varies */
+}
+
+.card-line {
+    width: 180px;
+    height: 2px;
+    background-color: #B69B7C;
+    margin-bottom: 20px;
+}
+
+.card-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.44px;
+    color: #B69B7C;
+}
+
+.philosophy-section {
+    background-color: #E8DED0;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.philosophy-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.philosophy-main-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 28px);
+    font-weight: 300;
+    line-height: 1.6;
+    color: #2C2C2C;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.philosophy-line {
+    width: 200px;
+    height: 2px;
+    background-color: #B69B7C;
+}
+
+.philosophy-sub-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.7rem, 1.5vw, 18px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9D866C;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .venture-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .philosophy-main-text, 
+    .philosophy-sub-text {
+        white-space: normal; 
+    }
+}
+
+@media (max-width: 768px) {
+    .forge-hero { height: 80vh; }
+    
+    .venture-container {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+    
+    .card-text { min-height: auto; }
+    
+    .philosophy-section {
+        padding: 80px 20px;
+    }
+
+    .philosophy-main-text, 
+    .philosophy-sub-text {
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 90%; 
+    }
+
+    .philosophy-main-text {
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+
+    .philosophy-sub-text {
+        letter-spacing: 1px;
+        font-size: 14px; 
+    }
+
+    
+    .philosophy-line {
+        width: 120px;
+    }
+}

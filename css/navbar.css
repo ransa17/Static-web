@@ -1,0 +1,180 @@
+/* --- Navigation Styles --- */
+
+.header {
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Glassmorphism Effect */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(245, 240, 230, 0.22);
+    border-bottom: 1px solid rgba(182, 155, 124, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    color: #221E1D;
+    font-size: clamp(18px, 2.5vw, 41px); /* Fluid typography */
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* --- Hamburger Button --- */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 1100;
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #221E1D;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before, 
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #221E1D;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
+
+/* --- Overlay Menu --- */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(232, 222, 208, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-close {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: #221E1D;
+    cursor: pointer;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #221E1D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: 600;
+    letter-spacing: 4px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #8c734b;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover {
+    color: #8c734b;
+}
+
+.nav-item:hover::after {
+    width: 50%;
+}
+
+/* --- Responsive Layout --- */
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+    
+    .logo-container img {
+        height: 60px;
+    }
+
+    .nav-close {
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px; /* Ensure text fits on small devices */
+    }
+}

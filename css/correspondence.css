@@ -1,0 +1,116 @@
+/* --- Global Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F0E6; /* Light Beige background for the lower section */
+    overflow-x: hidden;
+}
+
+.correspondence-hero {
+    background-color: #E8DED0;  
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 64px);
+    font-weight: 700;
+    color: #2C2C2C;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.hero-divider {
+    width: 200px;
+    height: 2px;
+    background-color: #B69B7C; 
+}
+
+.hero-description {
+    font-family: 'Source Serif Pro', serif;
+    font-size: clamp(1rem, 2vw, 20px);
+    font-weight: 300;
+    line-height: 1.6;
+    color: #2C2C2C;
+    letter-spacing: 0.5px;
+}
+
+.contact-details {
+    padding: 100px 20px;
+    text-align: center;
+    height: 60vh;;
+}
+
+.contact-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.email-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2C2C2C;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #B69B7C;
+}
+
+.tradition-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 28px);
+    font-weight: 400;
+    color: #2C2C2C;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    .correspondence-hero {
+        height: auto;
+        padding: 120px 20px 80px 20px;
+    }
+
+    .hero-content {
+        gap: 24px;
+    }
+
+    .contact-details {
+        padding: 60px 20px;
+    }
+    
+    .contact-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-divider {
+        width: 120px;
+    }
+}

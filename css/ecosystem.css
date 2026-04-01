@@ -1,0 +1,321 @@
+/* --- Global Reset & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Section 1: Ecosystem Hero --- */
+.ecosystem-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/images/ecobg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 14, 3, 0.3); 
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 260px;
+    height: 1.5px;
+    background-color: #a38d78; 
+    margin: 0 auto 25px auto;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f4f4;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* --- Section 2: Legacy Quote Section --- */
+.legacy-quote-section {
+    background-color: #E8DED0; 
+    padding: 60px 20px; 
+    width: 100%;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.quote-container {
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-line {
+    width: clamp(100px, 20vw, 200px);
+    height: 2px;
+    background-color: #a38d78; 
+    opacity: 0.6;
+    
+
+}
+
+.quote-line.top { margin-bottom: 50px; }
+.quote-line.bottom { margin-top: 50px; }
+
+.legacy-text {
+    font-family: 'Playfair Display', serif;
+    color: #1B1917; 
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+/* --- Section 3: Venture Section --- */
+.venture-section {
+    background-color: #F5F0E6;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.venture-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.venture-card {
+    background-color: #ede4d9; 
+    border-radius: 25px;
+    padding: 50px 35px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: default;
+}
+
+
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2C2C2C;
+font-size: 18px;
+font-family: Montserrat;
+font-weight: 400;
+line-height: 33.12px;
+word-wrap: break-word
+}
+
+.card-logo {
+    height: 80px; 
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #1B1917;
+    margin-bottom: 5px;
+    
+}
+
+.card-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+   color: #2C2C2C;
+
+font-weight: 400;
+line-height: 33.12px;
+word-wrap: break-word
+}
+
+.section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #C0A88D;
+
+
+font-weight: 700;
+line-height: 32px;
+word-wrap: break-word
+}
+
+.card-body {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+   
+    color: #6B6258;
+
+}
+
+.card-body p {
+    margin-bottom: 25px;
+}
+
+.card-divider {
+    width: 100%;
+    height: 1.5px;
+    background-color: #d1c7bc;
+    margin: 25px 0;
+}
+
+.card-footer-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #8d8378;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .venture-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    
+}
+
+@media (min-width: 1024px) {
+    .venture-section { padding: 100px 60px; }
+}
+
+@media (max-width: 768px) {
+    .ecosystem-hero { height: 85vh; }
+    .legacy-quote-section { padding: 50px 20px; }
+    .card-logo { height: 65px; } /* Slightly scaled for mobile */
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background-color: #E8DED0; /* Matching the Quote section color */
+    padding: 40px 20px; /* Reduced vertical padding for less height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-line {
+    width: clamp(80px, 15vw, 150px);
+    height: 1px;
+    background-color: #a38d78;
+    opacity: 0.5;
+}
+
+.cta-line.top {
+    margin-bottom: 25px;
+}
+
+.cta-line.bottom {
+    margin-top: 25px;
+}
+
+.cta-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.cta-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #1B1917; /* Dark charcoal */
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 600; /* Bold weight */
+    text-decoration: none;
+}
+
+.cta-link:hover {
+    color: #a38d78; /* Changes to bronze on hover */
+}
+
+/* --- Final Responsive Tweaks --- */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 30px 15px; /* Even less height on mobile */
+    }
+    
+    .cta-text {
+        font-size: 0.85rem;
+    }
+
+    .cta-link {
+        font-size: 1.1rem;
+    }
+
+    .cta-line.top, 
+    .cta-line.bottom {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}

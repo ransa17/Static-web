@@ -1,0 +1,243 @@
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500&family=Homemade+Apple&display=swap');
+
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #453d3d;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Section 1: Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('../assets/images/ledgebg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-wrapper {
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.accent-line {
+    width: clamp(50px, 10vw, 100px);
+    height: 1.5px;
+    background-color: #a38d78;
+    margin: 15px auto 25px auto;
+}
+
+.sub-heading {
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    letter-spacing: clamp(4px, 1vw, 8px);
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* --- Section 2: Letter Section --- */
+.letter-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('../assets/images/LEDGERTEXT.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.letter-container {
+    max-width: 850px;
+    width: 90%;
+    margin: 0 auto;
+    color: #1B1917; 
+    font-family: 'Homemade Apple', cursive;
+    text-align: left;
+}
+
+.letter-intro {
+    text-align: center;
+    font-size: clamp(22px, 4vw, 30px);
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+}
+
+.letter-divider {
+    width: 150px;
+    height: 1px;
+    background-color: #1B1917;
+    margin: 0 auto 50px auto;
+    opacity: 0.3;
+}
+
+.letter-body p {
+    font-size: clamp(18px, 3.5vw, 28px);
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(27, 25, 23, 0.4);
+}
+
+.italic-quote {
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 60px 0;
+    font-size: 1.1em;
+}
+
+/* --- Section 3: Investment Virtues Section --- */
+.virtues-section {
+    padding: 80px 20px;
+    background-color: #f6f1e9;
+    text-align: center;
+}
+
+.virtues-header {
+    margin-bottom: 60px;
+}
+
+.header-line {
+    width: 80px;
+    height: 2px;
+    background-color: #a38d78;
+    margin: 0 auto 20px auto;
+}
+
+.virtues-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #1B1917;
+    font-weight: 500;
+}
+
+.virtues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.virtue-card {
+    background-color: #f6f1e9;
+    border: 2px solid #8d8378; 
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: left;
+    cursor: default;
+}
+
+
+.virtue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1B1917;
+    margin-bottom: 5px;
+}
+
+.virtue-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #8d8378; /* Initial muted color */
+    text-transform: uppercase;
+    margin-bottom: 15px;;
+}
+
+.card-line {
+    width: 40px;
+    height: 1px;
+    background-color: #d1c7bc;
+    margin-bottom: 20px;
+}
+
+.virtue-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333; 
+    font-weight: 500; 
+}
+
+
+
+@media (min-width: 600px) {
+    .virtues-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-title {
+        letter-spacing: 4px;
+    }
+    .virtues-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    .virtues-section {
+        padding: 120px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .letter-section {
+        padding: 60px 0;
+        background-size: 100% 100%; 
+    }
+    .letter-container {
+        width: 85%;
+    }
+    .letter-body p {
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 500px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .hero-section {
+        height: 120vh;
+    }
+}

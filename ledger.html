@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/ledger.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&family=Homemade+Apple&family=Source+Serif+Pro:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;400;500&family=Homemade+Apple&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +17,10 @@
     <main>
         <section class="hero-section">
             <div class="content-wrapper">
-                </div>
+                <h1 class="main-title">The Ledger</h1>
+                <div class="accent-line"></div>
+                <p class="sub-heading">THE QUIET WISDOM</p>
+            </div>
         </section>
         
         <section class="letter-section">
@@ -87,7 +90,6 @@
     <script src="../js/main.js"></script>
     <script>
         window.onload = () => {
-            // Load components and highlight 'ledger' in the nav
             loadComponent('navbar-placeholder', '../Components/navbar.html', 'ledger');
             loadComponent('footer-placeholder', '../Components/footer.html');
         };

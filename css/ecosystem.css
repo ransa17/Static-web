@@ -77,11 +77,9 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
 
 .quote-container {
-   
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -93,8 +91,6 @@ body, html {
     height: 2px;
     background-color: #a38d78; 
     opacity: 0.6;
-    
-
 }
 
 .quote-line.top { margin-bottom: 50px; }
@@ -120,6 +116,7 @@ body, html {
 .venture-grid {
     display: flex;
     flex-direction: column; 
+    align-items: center; /* Ensures the card is centered in its column on mobile */
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -129,24 +126,23 @@ body, html {
     background-color: #ede4d9; 
     border-radius: 25px;
     padding: 50px 35px;
-    width: 90%;
+    width: 100%; /* Changed from 90% to 100% so parent padding handles the edges */
+    max-width: 500px; /* Optional: prevents cards from being too wide on landscape phones */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: default;
 }
 
-
-
 .card-header {
     text-align: center;
     margin-bottom: 30px;
     color: #2C2C2C;
-font-size: 18px;
-font-family: Montserrat;
-font-weight: 400;
-line-height: 33.12px;
-word-wrap: break-word
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 33.12px;
+    word-wrap: break-word;
 }
 
 .card-logo {
@@ -156,49 +152,39 @@ word-wrap: break-word
     margin-bottom: 20px;
 }
 
-
-
 .card-title {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #1B1917;
     margin-bottom: 5px;
-    
 }
 
 .card-tagline {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
-   color: #2C2C2C;
-
-font-weight: 400;
-line-height: 33.12px;
-word-wrap: break-word
+    color: #2C2C2C;
+    font-weight: 400;
+    line-height: 33.12px;
+    word-wrap: break-word;
 }
 
 .section-label {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
-    
     text-transform: uppercase;
     margin-bottom: 8px;
-    font-weight: 500;
     color: #C0A88D;
-
-
-font-weight: 700;
-line-height: 32px;
-word-wrap: break-word
+    font-weight: 700;
+    line-height: 32px;
+    word-wrap: break-word;
 }
 
 .card-body {
     font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     line-height: 1.7;
-   
     color: #6B6258;
-
 }
 
 .card-body p {
@@ -223,15 +209,15 @@ word-wrap: break-word
     text-align: center;
 }
 
-
 @media (min-width: 768px) {
     .venture-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
-    
-    
+    .venture-card {
+        max-width: none; /* Allow grid to control width on desktop */
+    }
 }
 
 @media (min-width: 1024px) {
@@ -241,13 +227,13 @@ word-wrap: break-word
 @media (max-width: 768px) {
     .ecosystem-hero { height: 85vh; }
     .legacy-quote-section { padding: 50px 20px; }
-    .card-logo { height: 65px; } /* Slightly scaled for mobile */
+    .card-logo { height: 65px; }
 }
 
 /* --- CTA Section --- */
 .cta-section {
-    background-color: #E8DED0; /* Matching the Quote section color */
-    padding: 40px 20px; /* Reduced vertical padding for less height */
+    background-color: #E8DED0;
+    padding: 40px 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -270,13 +256,8 @@ word-wrap: break-word
     opacity: 0.5;
 }
 
-.cta-line.top {
-    margin-bottom: 25px;
-}
-
-.cta-line.bottom {
-    margin-top: 25px;
-}
+.cta-line.top { margin-bottom: 25px; }
+.cta-line.bottom { margin-top: 25px; }
 
 .cta-text {
     font-family: 'Montserrat', sans-serif;
@@ -289,33 +270,19 @@ word-wrap: break-word
 
 .cta-link {
     font-family: 'Montserrat', sans-serif;
-    color: #1B1917; /* Dark charcoal */
+    color: #1B1917;
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 600; /* Bold weight */
+    font-weight: 600;
     text-decoration: none;
 }
 
 .cta-link:hover {
-    color: #a38d78; /* Changes to bronze on hover */
+    color: #a38d78;
 }
 
-/* --- Final Responsive Tweaks --- */
 @media (max-width: 768px) {
-    .cta-section {
-        padding: 30px 15px; /* Even less height on mobile */
-    }
-    
-    .cta-text {
-        font-size: 0.85rem;
-    }
-
-    .cta-link {
-        font-size: 1.1rem;
-    }
-
-    .cta-line.top, 
-    .cta-line.bottom {
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
+    .cta-section { padding: 30px 15px; }
+    .cta-text { font-size: 0.85rem; }
+    .cta-link { font-size: 1.1rem; }
+    .cta-line.top, .cta-line.bottom { margin-bottom: 15px; margin-top: 15px; }
 }

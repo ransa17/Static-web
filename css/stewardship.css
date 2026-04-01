@@ -68,7 +68,7 @@ body, html {
 /* --- Section 2: Measure Quote --- */
 .measure-section {
     background-color: #E8DED0; 
-    padding: 50px 20px; 
+    padding: 60px 20px; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -79,9 +79,6 @@ body, html {
 .measure-container {
     max-width: 850px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .measure-line {
@@ -89,6 +86,7 @@ body, html {
     height: 1px;
     background-color: #a38d78; 
     opacity: 0.5;
+    margin: 0 auto;
 }
 
 .measure-line.top { margin-bottom: 25px; }
@@ -104,7 +102,7 @@ body, html {
     padding: 0 10px;
 }
 
-/* --- Section 3: Pillars of Impact --- */
+/* --- Section 3: Pillars of Impact (RESPONSIVE FIX) --- */
 .pillars-section {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -137,24 +135,21 @@ body, html {
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr; /* 1 col on mobile */
+    gap: 30px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* --- Pillar Card Styles --- */
 .pillar-card {
-    background-color: #ede4d9; 
+    background-color: #ffffff; 
     border-radius: 20px;
-    padding: 45px 35px;
+    padding: 40px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    border: none; 
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                box-shadow 0.4s ease;
+    height: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-align: center; 
 }
 
@@ -163,34 +158,31 @@ body, html {
     box-shadow: 0 15px 35px rgba(0,0,0,0.06);
 }
 
-/* Uniform Image Adjustment */
 .pillar-icon {
-    height: 380px; /* Fixed Height to match the right image */
-    width: 100%;   /* Fill the width of the container */
-    max-width: 320px; /* Adjusting based on your screenshot label */
-    margin: 0 auto 30px auto;
-    object-fit: cover; /* CRITICAL: Crops images to fill the box without stretching */
-    display: block;
+    width: 100%;
+    height: 300px; /* Mobile height */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
 }
 
 .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #1B1917;
-    line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .card-divider {
     width: 60px;
     height: 1px;
     background-color: #a38d78;
-    margin: 15px auto; 
+    margin: 15px auto;
 }
 
 .card-desc {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: #444;
     margin-bottom: 25px;
@@ -198,6 +190,7 @@ body, html {
 }
 
 .card-link {
+    margin-top: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     color: #a38d78;
@@ -207,142 +200,48 @@ body, html {
     font-weight: 600;
 }
 
-/* --- Responsive Adjustments --- */
-
+/* Tablet & Desktop Adjustments for Pillars */
 @media (min-width: 768px) {
     .pillars-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .pillar-card {
-        text-align: left; 
-        padding: 50px 40px;
-    }
-
-    .pillar-icon {
-        margin: 0 0 30px 0; /* Left align for Desktop */
-        height: 385px; /* Exact height from your screenshot label */
-        width: 328px; /* Exact width from your screenshot label */
-    }
-
-    .card-divider {
-        margin: 20px 0; 
+        grid-template-columns: repeat(2, 1fr); /* 2 cols for tablet */
     }
 }
 
-@media (max-width: 768px) {
-    .stewardship-hero { height: 80vh; }
-    .pillars-section { padding: 60px 15px; }
-    .pillar-card { padding: 40px 25px; }
-    .pillar-icon {
-        height: 350px; /* Slightly shorter for mobile screens */
-        width: 100%;
+@media (min-width: 1024px) {
+    .pillars-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cols for desktop */
     }
+    .pillar-card { text-align: left; padding: 50px 40px; }
+    .pillar-icon { height: 385px; }
+    .card-divider { margin: 20px 0; }
 }
 
-@media (max-height: 500px) {
-    .stewardship-hero { height: 110vh; }
-}
-
-/* --- The Work Continues Section --- */
-.work-continues-section {
-    background-color: #E8DED0; /* Exact color requested */
-    padding: 40px 20px; /* Reduced vertical padding for less height */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.work-container {
-    max-width: 900px;
-    width: 100%;
-}
-
-.work-title {
-    font-family: 'Playfair Display', serif;
-    color: #1B1917;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-
-.work-list {
-    margin-bottom: 30px;
-}
-
-.work-list-item {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.7rem, 2vw, 0.85rem);
-    color: #8d8378;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-.work-desc {
-    font-family: 'Playfair Display', serif;
-    color: #333;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-    .work-continues-section {
-        padding: 30px 15px; /* Even shorter on mobile */
-    }
-
-    .work-title {
-        margin-bottom: 20px;
-    }
-
-    .work-list-item {
-        margin-bottom: 8px;
-        letter-spacing: 1.5px;
-    }
-
-    .work-desc {
-        line-height: 1.5;
-    }
-}
-
-/* --- Legacy Grid Section --- */
+/* --- Section 4: Legacy Grid Section --- */
 .legacy-section {
-    background-color: #ffffff; /* Section background is white */
+    background-color: #ffffff;
     padding: 80px 20px;
     width: 100%;
 }
 
 .legacy-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .legacy-card {
-    background-color: #ede4d9; /* Card background as previous */
+    background-color: #ede4d9;
     padding: 30px;
-    border-radius: 5px; /* Slight radius for a classic look */
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
 }
 
-.legacy-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Uniform Image box */
 .legacy-img-box {
     width: 100%;
-    height: 250px; /* Uniform height for all cards */
+    height: 250px;
     overflow: hidden;
     margin-bottom: 25px;
 }
@@ -350,20 +249,14 @@ body, html {
 .legacy-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures uniform look without stretching */
-}
-
-.legacy-content {
-    text-align: left;
+    object-fit: cover;
 }
 
 .legacy-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #1B1917;
-    line-height: 1.3;
     margin-bottom: 15px;
-    font-weight: 500;
 }
 
 .legacy-desc {
@@ -372,122 +265,36 @@ body, html {
     line-height: 1.6;
     color: #444;
     margin-bottom: 20px;
-    font-weight: 300;
 }
 
-.legacy-divider {
-    width: 60px;
-    height: 1px;
-    background-color: #a38d78;
-    margin-bottom: 15px;
-    opacity: 0.6;
-}
-
-.legacy-footer {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    font-style: italic;
-    color: #8d8378;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* --- Responsive Layout Adjustments --- */
-
-/* Desktop: 2x2 Grid */
 @media (min-width: 992px) {
-    .legacy-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-    }
-    
-    .legacy-img-box {
-        height: 280px; /* Slightly taller for desktop */
-    }
+    .legacy-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 768px) {
-    .legacy-section {
-        padding: 50px 15px;
-    }
-    
-    .legacy-title {
-        font-size: 1.4rem;
-    }
-    
-    .legacy-img-box {
-        height: 220px; /* Shorter for mobile screens */
-    }
-}
-
-/* --- Dharma Quote Section --- */
+/* --- Section 5: Dharma Quote Section --- */
 .dharma-section {
-    background-color: #E8DED0; /* Matching global cream background */
-    padding: 60px 20px; /* Low vertical padding for less height */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #E8DED0;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.dharma-container {
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dharma-line {
-    width: clamp(80px, 15vw, 150px);
-    height: 1px;
-    background-color: #a38d78;
-    opacity: 0.5;
-    margin: 20px 0; /* Minimal spacing between elements */
 }
 
 .dharma-quote {
     font-family: 'Playfair Display', serif;
-    color: #1B1917;
     font-size: clamp(1.4rem, 4vw, 2.4rem);
-    line-height: 1.4;
-    font-weight: 500;
     font-style: italic;
-    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
 .dharma-desc {
     font-family: 'Montserrat', sans-serif;
-    color: #444;
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    line-height: 1.8;
     max-width: 750px;
-    font-weight: 300;
-    margin: 10px 0;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* --- Responsive Layout Adjustments --- */
-@media (max-width: 768px) {
-    .dharma-section {
-        padding: 40px 15px; /* Even tighter height for mobile */
-    }
-
-    .dharma-quote br {
-        display: none; /* Allows text to flow naturally on small screens */
-    }
-
-    .dharma-quote {
-        font-size: 1.3rem;
-        line-height: 1.5;
-    }
-
-    .dharma-desc {
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
-
-    .dharma-line {
-        margin: 15px 0;
-    }
+.dharma-line {
+    width: 100px;
+    height: 1px;
+    background-color: #a38d78;
+    margin: 20px auto;
 }

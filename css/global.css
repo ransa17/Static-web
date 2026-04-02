@@ -155,10 +155,18 @@ body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', san
     gap: 20px;
 }
 
+/* Added Link Style for Logo Branding */
+.footer-logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .footer-logo {
     height: 80px;
     width: 80px;
-    margin-bottom: 10px;
 }
 
 .footer-company-name {
@@ -185,13 +193,23 @@ body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', san
     border-radius: 8px;
 }
 
-
+/* --- UPDATED FOOTER NAV WITH BROWN BULLETS --- */
 .footer-nav {
     margin-top: 40px;
+}
+
+.footer-nav ul {
+    list-style-type: disc; /* Enables standard bullets */
+    padding-left: 20px;    /* Space for bullets */
+    margin: 0;
     display: flex;
-    flex-direction: column; 
-    text-align: left; 
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;             /* Reduced line spacing */
+    color: #B69B7C;        /* Sets bullet color to Brown */
+}
+
+.footer-nav li {
+    line-height: 1.2;
 }
 
 .footer-nav a {
@@ -199,10 +217,11 @@ body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', san
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 600;
-    color: #6B6258;
+    color: #6B6258;        /* Link text remains Grey */
     text-transform: uppercase;
     letter-spacing: 1.2px;
     transition: color 0.3s ease;
+    display: inline-block;
 }
 
 .footer-nav a:hover {
@@ -219,6 +238,8 @@ body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', san
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
+/* --- RESPONSIVE QUERIES --- */
 @media (max-width: 1024px) {
     .header { padding: 15px 40px; }
     .logo-container img { height: 60px; }
@@ -244,11 +265,16 @@ body { background-color: #F5F0E6; color: #2C2C2C; font-family: 'Montserrat', san
         align-items: center;    
     }
 
+    /* Centers the bulleted list on mobile */
     .footer-nav {
         margin-top: 0;          
-        text-align: center;     
         width: 100%;
-        align-items: center;    
+    }
+
+    .footer-nav ul {
+        align-items: center;
+        padding-left: 0;
+        list-style-position: inside; /* Keeps bullets next to centered text */
     }
 
     .footer-logo {

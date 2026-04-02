@@ -15,7 +15,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('../assets/images/forgebg.jpg') no-repeat center center;
+    background: url('../assets/imagep/forgebg.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;

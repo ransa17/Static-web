@@ -18,7 +18,7 @@ body, html {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('../assets/images/stewardshipbg.png') no-repeat center center;
+    background: url('../assets/imagep/stewardshipbg.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;

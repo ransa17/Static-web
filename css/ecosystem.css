@@ -18,7 +18,7 @@ body, html {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('../assets/images/ecobg.png') no-repeat center center;
+    background: url('../assets/imagep/ecobg.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -132,6 +132,8 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     cursor: default;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-header {
@@ -146,10 +148,10 @@ body, html {
 }
 
 .card-logo {
-    height: 140px; 
+    height: 105px; 
     width: auto;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .card-title {

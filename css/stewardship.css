@@ -33,7 +33,6 @@ body, html {
     width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.35); 
     z-index: 1;
-   
 }
 
 .hero-content {
@@ -51,7 +50,7 @@ body, html {
 }
 
 .hero-divider {
-    width: 220px;
+    width: 200px;
     height: 1.5px;
     background-color: #a38d78; 
     margin: 0 auto 20px auto;
@@ -105,7 +104,7 @@ body, html {
 /* --- Section 3: Pillars (Responsive Grid) --- */
 .pillars-section {
     padding: 80px 20px;
-    background-color: #F5F0E6;
+    background-color: #f7f3ed;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -124,128 +123,55 @@ body, html {
 .pillars-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 80px; /* INCREASED SPACE BETWEEN CARDS */
     width: 100%;
     max-width: 1200px;
 }
 
 .pillar-card {
-    background-color: #F5F0E6; 
-    border-radius: 20px;
-    padding: 40px 25px;
+    background-color: transparent; 
+    border-radius: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: transform 0.4s ease;
     text-align: center; 
 }
 
 .pillar-icon {
-    height: 380px; /* Fixed Height to match the right image */
-    width: 100%;   /* Fill the width of the container */
-    max-width: 320px; /* Adjusting based on your screenshot label */
-    margin: 0 auto 30px auto;
-    object-fit: cover; /* CRITICAL: Crops images to fill the box without stretching */
-    display: block;
-    filter: grayscale(60%);
-}
-
-.card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #1B1917;
-    line-height: 1.3;
-    margin-bottom: 15px;
-}
-
-.card-divider {
-    width: 60px;
-    height: 1px;
-    background-color: #a38d78;
-    margin: 15px auto; 
-}
-
-.card-desc {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 25px;
-    font-weight: 300;
-}
-
-.card-link {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    color: #a38d78;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-/* --- Responsive Adjustments --- */
-
-@media (min-width: 768px) {
-    .pillars-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .pillar-card {
-        text-align: left; 
-        padding: 50px 40px;
-    }
-
-    .pillar-icon {
-        margin: 0 0 30px 0; /* Left align for Desktop */
-        height: 385px; /* Exact height from your screenshot label */
-        width: 328px; /* Exact width from your screenshot label */
-    }
-
-    .card-divider {
-        margin: 20px 0; 
-    }
-}
-
-@media (max-width: 768px) {
-    .stewardship-hero { height: 80vh; }
-    .pillars-section { padding: 60px 15px; }
-    .pillar-card { padding: 40px 25px; }
-    .pillar-icon {
-        height: 350px; /* Slightly shorter for mobile screens */
-        width: 100%;
-    }
-}
-
-@media (max-height: 500px) {
-    .stewardship-hero { height: 110vh; }
-}
-
-/* --- The Work Continues Section --- */
-.work-continues-section {
-    background-color: #E8DED0; /* Exact color requested */
-    padding: 40px 20px; /* Reduced vertical padding for less height */
     width: 100%;
-    height: 300px; 
+    height: 320px; 
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 0;
     margin-bottom: 30px;
 }
 
-.card-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 10px; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 10px; color: #1B1917; }
 
-.card-divider { width: 60px; height: 1px; background-color: #a38d78; margin: 15px auto; }
+.card-divider { width: 120px; height: 1px; background-color: #a38d78; margin: 15px auto; opacity: 0.6; }
 
-.card-desc { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #444; margin-bottom: 25px; }
+.card-desc { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.95rem; 
+    line-height: 1.8; 
+    color: #6B6258; 
+    margin-bottom: 25px;
+    font-weight: 400;
+}
 
-.card-link { margin-top: auto; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: #a38d78; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; font-weight: 600; }
+.card-footer-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #a38d78;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    margin-top: auto;
+}
 
 @media (min-width: 768px) { .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { 
     .pillars-grid { grid-template-columns: repeat(3, 1fr); } 
-    .pillar-card { text-align: left; padding: 50px 40px; }
-    .pillar-icon { height: 385px; }
-    .card-divider { margin: 20px 0; }
 }
 
 /* --- Section 4: Work Continues (Compact) --- */
@@ -259,19 +185,20 @@ body, html {
 
 .work-list-item { font-family: 'Montserrat', sans-serif; font-size: clamp(0.65rem, 1.5vw, 0.8rem); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 8px; color: #6B6258; }
 
-.legacy-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    filter: grayscale(60%);
 .work-desc { font-family: 'Playfair Display', serif; font-size: clamp(0.95rem, 2vw, 1.2rem); line-height: 1.5; max-width: 700px; margin: 0 auto; }
 
 /* --- Section 5: Legacy Grid --- */
-.legacy-section { background-color:#F5F0E6; padding: 80px 20px; }
+.legacy-section { background-color: #ffffff; padding: 80px 20px; }
 
-.legacy-grid { display: grid; grid-template-columns: 1fr; gap: 50px; max-width: 1100px; margin: 0 auto; }
+.legacy-grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 100px; /* INCREASED SPACE BETWEEN LEGACY CARDS */
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
 
-.legacy-card { background-color: #F5F0E6; padding: 10px; display: flex; flex-direction: column; }
+.legacy-card { background-color: #ffffff; padding: 10px; display: flex; flex-direction: column; }
 
 .legacy-img-box { height: 250px; overflow: hidden; margin-bottom: 25px; }
 
@@ -281,7 +208,7 @@ body, html {
 
 @media (min-width: 992px) { .legacy-grid { grid-template-columns: repeat(2, 1fr); } }
 
-/* --- Section 6: Dharma Quote (Small Text Match) --- */
+/* --- Section 6: Dharma Quote --- */
 .dharma-section {
     background-color: #E8DED0;
     padding: 70px 20px;
@@ -310,7 +237,6 @@ body, html {
 .dharma-quote {
     font-family: 'Playfair Display', serif;
     color: #333;
-    /* Balanced size: Max 2.6rem */
     font-size: clamp(1.6rem, 3.5vw, 2.6rem); 
     line-height: 1.4;
     font-style: italic;
@@ -333,4 +259,13 @@ body, html {
     .dharma-quote { font-size: 1.4rem; line-height: 1.5; }
     .dharma-quote br { display: none; }
     .dharma-desc { font-size: 0.8rem; }
+}
+
+.legacy-divider {
+    width: 180px;                /* Specific length to match your "Three Pillars" and "Hero" lines */
+    height: 1.5px;              /* Slightly thicker than a standard border for a "designed" feel */
+    background-color: #B29D84;  /* The exact Gold/Bronze hex from your "Three Pillars" section */
+    margin: 30px 0 15px 0;      /* 30px top margin for breathing room, 15px bottom to sit near the footer text */
+    border: none;               /* Removes default hr or div border styling */
+    opacity: 0.8;               /* Slight transparency to keep it elegant and not too "heavy" */
 }

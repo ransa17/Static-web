@@ -175,12 +175,11 @@
 .pillar-explore {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
-    color: #36312f;
-    border-bottom: 1px solid #221E1D;
+    color: #967a6f;
     width: fit-content;
     padding-bottom: 4px;
     transition: color 0.3s, border-color 0.3s;

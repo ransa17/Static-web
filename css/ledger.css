@@ -1,5 +1,5 @@
 /* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500&family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;400;500&family=Homemade+Apple&display=swap');
 
 /* --- Global Reset --- */
 * {
@@ -10,12 +10,12 @@
 
 body, html {
     height: 100%;
-    background-color: #453d3d;
+    background-color: #ffffff;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-/* --- Section 1: Hero Section --- */
+/* --- Section 1: Hero Section (Updated per Screenshot) --- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -25,7 +25,7 @@ body, html {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centers content vertically */
     text-align: center;
 }
 
@@ -37,12 +37,13 @@ body, html {
 .main-title {
     font-family: 'Playfair Display', serif;
     color: #ffffff;
-    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-size: clamp(2.5rem, 8vw, 4.5rem); 
     font-weight: 500;
     margin-bottom: 10px;
     
 }
 
+/* The Horizontal Line between Heading and Subtitle */
 .accent-line {
     width: 220px;
     height: 1.5px;
@@ -56,7 +57,7 @@ body, html {
     font-size: 28px;
    
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0.9;
 }
 
@@ -86,7 +87,7 @@ body, html {
 
 .letter-intro {
     text-align: center;
-    font-size: clamp(22px, 4vw, 30px);
+    font-size: clamp(18px, 4vw, 30px);
     line-height: 1.7;
     letter-spacing: 0.08em;
     margin-bottom: 20px;
@@ -101,7 +102,7 @@ body, html {
 }
 
 .letter-body p {
-    font-size: clamp(18px, 3.5vw, 28px);
+    font-size: clamp(16px, 3.5vw, 28px);
     line-height: 1.7;
     letter-spacing: 0.08em;
     margin-bottom: 40px;
@@ -157,16 +158,13 @@ body, html {
     margin: 0 auto;
 }
 
-/* Card Styling */
 .virtue-card {
     background-color: #f6f1e9;
     border: 2px solid #8d8378; 
     border-radius: 15px;
     padding: 40px 30px;
     text-align: left;
-    cursor: default;
 }
-
 
 .virtue-name {
     font-family: 'Playfair Display', serif;
@@ -181,7 +179,7 @@ body, html {
     letter-spacing: 2px;
     color: #8d8378; 
     text-transform: uppercase;
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
 }
 
 .card-line {
@@ -199,7 +197,7 @@ body, html {
     font-weight: 500; 
 }
 
-
+/* --- Media Queries --- */
 
 @media (min-width: 600px) {
     .virtues-grid {
@@ -208,9 +206,6 @@ body, html {
 }
 
 @media (min-width: 1024px) {
-    .main-title {
-        letter-spacing: 4px;
-    }
     .virtues-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
@@ -221,9 +216,10 @@ body, html {
 }
 
 @media (max-width: 768px) {
+    .hero-section { height: 80vh; }
     .letter-section {
         padding: 60px 0;
-        background-size: 100% 100%; 
+        background-size: cover; 
     }
     .letter-container {
         width: 85%;
@@ -232,14 +228,5 @@ body, html {
         line-height: 1.6;
         letter-spacing: 0.05em;
         margin-bottom: 30px;
-    }
-}
-
-@media (max-height: 500px) {
-    .main-title {
-        font-size: 2rem;
-    }
-    .hero-section {
-        height: 120vh;
     }
 }

@@ -39,29 +39,29 @@ body, html {
     color: #ffffff;
     font-size: clamp(2.5rem, 8vw, 4.5rem); 
     font-weight: 500;
-    margin-bottom: 0;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
+    
 }
 
 /* The Horizontal Line between Heading and Subtitle */
 .accent-line {
     width: 220px;
-    height: 1px; 
-    background-color: rgba(255, 255, 255, 0.7); 
-    margin: 15px auto; 
+    height: 1.5px;
+    background-color: #a38d78;
+    margin: 15px auto 25px auto;
 }
 
 .sub-heading {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: clamp(0.75rem, 2vw, 0.9rem);
-    letter-spacing: 4px;
+    color: #ffffff ;
+    font-size: 28px;
+   
     text-transform: uppercase;
     font-weight: 400;
     opacity: 0.9;
 }
 
-/* --- Section 2: Letter Section --- */
+
 .letter-section {
     width: 100%;
     min-height: 100vh;
@@ -135,7 +135,7 @@ body, html {
 }
 
 .header-line {
-    width: 80px;
+    width: 220px;
     height: 2px;
     background-color: #a38d78;
     margin: 0 auto 20px auto;
@@ -146,6 +146,8 @@ body, html {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #1B1917;
     font-weight: 500;
+    margin-top: 60px;
+    
 }
 
 .virtues-grid {
@@ -166,7 +168,7 @@ body, html {
 
 .virtue-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #1B1917;
     margin-bottom: 5px;
 }

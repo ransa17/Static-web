@@ -53,7 +53,9 @@ body {
     width: 220px;
     height: 1.5px;
     background-color: #B69B7C;
-    margin: 20px auto;
+    margin: 20px auto; 
+    margin-top:  40px ;
+    margin-bottom: 40px;
 }
 
 .hero-tagline {
@@ -104,7 +106,7 @@ body {
 
 .card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     color: #2C2C2C;
     margin-bottom: 25px;
@@ -114,7 +116,7 @@ body {
 
 .card-text {
     font-family: 'Source Serif Pro', serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     color: #6B6258;
     margin-bottom: 30px;

@@ -49,7 +49,7 @@ body, html {
     color: #ffffff;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     letter-spacing: 1px;
 }
 
@@ -67,6 +67,7 @@ body, html {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 300;
+     margin-top: 40px;
 }
 
 /* --- Section 2: Legacy Quote Section --- */

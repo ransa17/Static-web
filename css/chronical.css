@@ -185,7 +185,20 @@ body {
         width: 80%;
     }
 }
+@media (max-width: 768px) {
+    .narrative-text p {
+        width: auto;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 20px;
+        line-height: 28px;
+        text-wrap: balance;
+    }
 
+    
+}
 /* --- Timeline Section --- */
 .timeline-section {
     background-color: #F5F0E6; /* Slightly lighter beige */

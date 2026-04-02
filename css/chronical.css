@@ -140,7 +140,51 @@ body {
     margin-bottom: 100px;
 }
 
+@media (max-width: 1024px) {
+    .narrative-row {
+        flex-direction: column !important;
+        gap: 60px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
 
+    .narrative-text {
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .narrative-text p {
+        width: 90%;
+        max-width: 450px;
+        text-align: center;
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .narrative-heading {
+        text-align: center;
+        font-size: 2.2rem;
+        white-space: normal;
+        width: 100%;
+    }
+
+    .narrative-image {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .narrative-image img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+
+    .narrative-divider {
+        margin: 50px auto;
+        width: 80%;
+    }
+}
 @media (max-width: 768px) {
     .narrative-text p {
         width: auto;

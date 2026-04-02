@@ -121,6 +121,7 @@ body {
     color: #6B6258;
     margin-bottom: 30px;
     min-height: 130px; 
+    max-width: 220px;
 }
 
 .card-line {

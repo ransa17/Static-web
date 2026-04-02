@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    filter: contrast(80%) brightness(110%) saturate(80%) sepia(10%);
 }
 
 .hero-overlay {
@@ -198,12 +199,9 @@ body {
     object-fit: cover;
     margin-bottom: 30px;
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
 }
 
-.timeline-item:hover .timeline-img {
-    filter: grayscale(0%);
-}
+
 
 .timeline-year {
     font-family: 'Cormorant Garamond', serif;

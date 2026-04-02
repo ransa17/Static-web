@@ -50,7 +50,7 @@ body {
 }
 
 .hero-divider {
-  width: 220px;
+    width: 220px;
     height: 1.5px;
     background-color: #B69B7C;
     margin: 20px auto;
